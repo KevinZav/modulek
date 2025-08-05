@@ -1,0 +1,15 @@
+{
+  "name": "modulek",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "KevinZav",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepare": "yarn build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
