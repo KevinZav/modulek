@@ -1,15 +1,23 @@
 {
   "name": "modulek",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/modulek.cjs.js",
+  "module": "dist/modulesk.es.js",
+  "types": "dist/index.d.ts",
   "author": "KevinZav",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "build": "vite build",
     "clean": "rm -rf dist",
     "prepare": "yarn build"
   },
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vite": "^7.1.1",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "peerDependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "axios": "1.11.0"
   }
 }
