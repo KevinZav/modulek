@@ -25,3 +25,29 @@ git submodule add git@github.com:KevinZav/modulek.git
 ```bash
 npm install
 ```
+
+### Uso
+
+Este modulo se puede usar en cualquier framework y posiblemente en el futuro se implementen funcionalidades exclusivas para React, Angular o Vue.
+
+Para usar una funcion o clase basta con importar y dar uso:
+
+#### Angular
+
+```ts
+import { greeting } from 'modulek';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.scss'
+})
+export class App {
+  protected readonly saludo = signal(greeting('Kevin'));
+}
+```
+
+```html
+<h4>{{saludo()}}</h4>
+```
