@@ -2,7 +2,7 @@
   "name": "modulek",
   "version": "1.0.0",
   "main": "dist/modulek.cjs.js",
-  "module": "dist/modulesk.es.js",
+  "module": "dist/modulek.es.js",
   "types": "dist/index.d.ts",
   "author": "KevinZav",
   "license": "MIT",
@@ -19,5 +19,12 @@
   "peerDependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "axios": "1.11.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/modulek.es.js",
+      "require": "./dist/modulek.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
   }
 }
